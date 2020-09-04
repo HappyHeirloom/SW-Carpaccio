@@ -28,7 +28,7 @@ namespace SW_Carpaccio
         {
             int port = 69;
 
-            TcpClient client = new TcpClient("localhost", port);
+            TcpClient client = new TcpClient("192.168.24.117", port);
 
             NetworkStream ns = client.GetStream();
             StreamReader reader = new StreamReader(ns);
