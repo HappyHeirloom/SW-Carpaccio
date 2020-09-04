@@ -24,6 +24,14 @@ namespace SW_Carpaccio
             StartClient();
         }
 
+        public static void AddHeader()
+        {
+            for (int i = 0; i < Console.BufferWidth; i++)
+            {
+                Console.Write('#');
+            }
+        }
+
         public static void StartClient()
         {
             int port = 69;
@@ -36,6 +44,8 @@ namespace SW_Carpaccio
 
             while (true)
             {
+                AddHeader();
+
                 // Amount of items
                 Console.WriteLine("Input your amount of items:");
                 string AmountOfItems = Console.ReadLine();
